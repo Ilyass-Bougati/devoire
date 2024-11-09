@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <uchar.h>
 
 #include "include/chiffres.h"
 
@@ -39,7 +38,7 @@ void entier_to_text(char *entier)
 		entier++;
 	}
 
-	int i = 0; 
+	int i = 0;
 	int len = strlen(entier);
 	int j = (len - 1)/ 3;
 	while (i < len && j >= 0)
@@ -52,6 +51,7 @@ void entier_to_text(char *entier)
         j--;
 		i += (len - i) % 3 ? (len - i) % 3 : 3;
 	}
+	printf("\n");
 }
 
 // saisir une chaine de characters

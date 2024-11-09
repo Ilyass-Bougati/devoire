@@ -27,7 +27,7 @@ int main()
 	do {
 		str_entier = get_string("Entrer un reele : ");
 	} while (check_string(str_entier) || check_strlen(str_entier));
-	
+
 	// afficher la partie entier
 	partie_entiere = (char *) malloc(sizeof(char));
 	while ((character = str_entier[i]) != '.' && character != '\0')
@@ -69,9 +69,10 @@ int main()
 			i++;
 		}
 		partie_fract[j] = '\0';
-		
+
 		entier_to_text(partie_fract);
 	}
+	printf("\n");
 }
 
 // convertir les chiffres au mots
@@ -84,7 +85,7 @@ void entier_to_text(char *entier)
 		entier++;
 	}
 
-	int i = 0; 
+	int i = 0;
 	int len = strlen(entier);
 	int j = (len - 1)/ 3;
 	while (i < len && j >= 0)
@@ -130,7 +131,7 @@ bool check_string(char *string)
 		if (string[i] == '.')
 		{
 			vigrule_counte += 1;
-		} 
+		}
 		if (string[i] > '9' || string[i] < 0 || vigrule_counte > 1)
 		{
 			printf("Reel invalide\n");
